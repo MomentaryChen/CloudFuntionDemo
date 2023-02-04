@@ -53,7 +53,7 @@ public class CloudFunctionDemoApplication {
 		
 		String objectName = "employees/employees-" + zdt.format(DTF).toString()  + ".csv";
 		
-		final String msg = "上傳成功";
+		final String msg = "Upload Successfully";
 		try {
 			FixedOrderComparator<String> fixedOrderComparator = new FixedOrderComparator<>("ID", "NAME", "ADDRESS", "EMAIL");
 			StringWriter writer = csvUtils.writeRowsToCsvStrings(employees, fixedOrderComparator, EmployeeModel.class );
